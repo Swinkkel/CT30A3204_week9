@@ -3,6 +3,7 @@ import React from 'react'
 export type TItem = {
     id: string;
     text: string;
+    clicked: boolean;
 }
 
 interface ListProps {
