@@ -9,16 +9,16 @@ export type TItem = {
 interface ListProps {
     header: string;
     items: TItem[];
-    updateClickedItem: (id: string) => void;
+    updateList: (id: string) => void;
 }
 
-const MyList: React.FC<ListProps> = ({header, items, updateClickedItem}) => {
+const MyList: React.FC<ListProps> = ({header, items, updateList}) => {
     return (
         <div>
             <h1>{header}</h1>
             <ol>
                 {items.map((item) => (
-                    <li key={item.id} onClick={() => updateClickedItem(item.id)} style={{textDecoration: item.clicked ? 'line-through': 'none'}}>{item.text} </li>
+                    <li key={item.id} onClick={() => updateList(item.id)} style={{textDecoration: item.clicked ? 'line-through': 'none'}}>{item.text} </li>
                 ))}
             </ol>
         </div>

@@ -24,7 +24,7 @@ const MyContainer: React.FC = () => {
         <div>
             <textarea name="text" id="test" onChange={(e) => setContent(e.target.value)} value={content} />
             <button onClick={addItem}>Add</button>
-            <MyList header={header} items={items} updateClickedItem={updateClickedItem}/>
+            <MyList header={header} items={items} updateList={updateClickedItem}/>
         </div>
     )
 }
