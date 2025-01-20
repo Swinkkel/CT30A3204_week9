@@ -3,7 +3,10 @@ import MyList, {TItem} from './MyList'
 
 const MyContainer: React.FC = () => {
     const header: string = 'this is list header'
-    const [items, setItems] = useState<TItem[]>([])
+    const [items, setItems] = useState<TItem[]>([
+        {id: '1', text: 'This is first task', clicked: false},
+        {id: '2', text: 'This is second task', clicked: false},
+    ])
     const [content, setContent] = useState<string>("")
  
     const updateClickedItem = (id: string): void => {
